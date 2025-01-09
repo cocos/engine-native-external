@@ -137,7 +137,7 @@ declare namespace b2 {
         IDENTITY: b2Rot;
     }
     export class Transform {
-        static MulXV(_xf: Transform, center: Vec2, _tmp_vec2: Vec2): any;
+        static MulXV(_xf: any, center: any, _tmp_vec2: any): any;
         constructor();
         p: Vec2;
         q: b2Rot;
@@ -193,7 +193,7 @@ declare namespace b2 {
     }
 
     class ContactListener {
-        init(param: any);
+        initWithThis(param: any);
         constructor();
         BeginContact(contact: Contact): void;
         EndContact(contact: Contact): void;
@@ -285,7 +285,7 @@ declare namespace b2 {
 
         IsTouching(): boolean ;
 
-        SetEnabled(flag: boolean);
+        SetEnabled(flag: any);
 
         IsEnabled();
 
@@ -307,19 +307,19 @@ declare namespace b2 {
 
         FlagForFiltering(): void;
 
-        SetFriction(friction: number): void;
+        SetFriction(friction: any): void;
 
         GetFriction(): number;
 
         ResetFriction(): void;
 
-        SetRestitution(restitution: number): void;
+        SetRestitution(restitution: any): void;
 
         GetRestitution(): number;
 
         ResetRestitution(): void;
 
-        SetTangentSpeed(speed: number): void;
+        SetTangentSpeed(speed: any): void;
 
         GetTangentSpeed(): number;
 
@@ -327,7 +327,7 @@ declare namespace b2 {
     }
 
     class Draw {
-        init(param: any);
+        initWithThis(param: any);
         constructor();
         SetFlags(flags: number): void;
         GetFlags(): number;
@@ -386,7 +386,7 @@ declare namespace b2 {
 
     class CircleShape extends Shape {
         constructor();
-        m_p: Vec2;
+        m_p: any;
         Clone(): CircleShape;
         GetChildCount(): number;
         TestPoint(transform: Transform, p: Vec2): boolean;
